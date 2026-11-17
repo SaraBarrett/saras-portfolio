@@ -1,0 +1,482 @@
+// Bootstrap
+$primary: #285443;
+$success: #526e59;
+$body-bg: #faf9f6;
+$body-color: #303b35;
+
+$font-family-sans-serif: system-ui, -apple-system, "Segoe UI", sans-serif;
+$border-radius: 0.85rem;
+$border-radius-lg: 1.25rem;
+
+@import "bootstrap/scss/bootstrap";
+
+// Modo claro
+:root,
+[data-bs-theme="light"] {
+  color-scheme: light;
+
+  --page-bg: #faf9f6;
+  --surface: #ffffff;
+  --lavender: #eee8f5;
+  --sage: #e4ede5;
+
+  --ink: #303b35;
+  --muted: #626d66;
+  --line: #dce4dd;
+  --green: #285443;
+  --purple: #725786;
+
+  --button-bg: #285443;
+  --button-hover: #1d4032;
+  --button-text: #ffffff;
+
+  --secondary-bg: #e4ede5;
+  --secondary-hover: #d4e2d6;
+  --secondary-text: #285443;
+}
+
+// Modo noturno
+[data-bs-theme="dark"] {
+  color-scheme: dark;
+
+  --page-bg: #14221c;
+  --surface: #1b2d24;
+  --lavender: #302c3c;
+  --sage: #243e31;
+
+  --ink: #eff3ed;
+  --muted: #bac7bc;
+  --line: #3b5143;
+  --green: #b7d8bf;
+  --purple: #d2bee7;
+
+  --button-bg: #bfdcc5;
+  --button-hover: #d3e8d7;
+  --button-text: #183424;
+
+  --secondary-bg: #304c3b;
+  --secondary-hover: #3b5b47;
+  --secondary-text: #e0eee2;
+
+   .contact-form .invalid-feedback,
+  .contact-feedback-error {
+    color: #ffb6c0;
+  }
+
+  .contact-form .form-control.is-invalid,
+  .contact-feedback-error {
+    border-color: #ffb6c0;
+  }
+}
+
+// Variáveis Bootstrap adaptadas ao tema
+:root,
+[data-bs-theme] {
+  --bs-body-bg: var(--page-bg);
+  --bs-body-color: var(--ink);
+  --bs-secondary-color: var(--muted);
+  --bs-border-color: var(--line);
+  --bs-heading-color: var(--green);
+  --bs-link-color: var(--green);
+  --bs-link-hover-color: var(--purple);
+}
+
+body {
+  margin: 0;
+  background: var(--page-bg);
+  color: var(--ink);
+  line-height: 1.75;
+}
+
+::selection {
+  background: var(--green);
+  color: var(--page-bg);
+}
+
+a {
+  text-underline-offset: 0.25em;
+}
+
+a:focus-visible,
+button:focus-visible {
+  outline: 3px solid var(--purple);
+  outline-offset: 4px;
+}
+
+section[id] {
+  scroll-margin-top: 2rem;
+}
+
+// Navegação
+.portfolio-navbar {
+  padding-block: 1.5rem;
+}
+
+.portfolio-brand {
+  color: var(--green);
+  font-size: 1.15rem;
+  font-weight: 650;
+  text-decoration: none;
+}
+
+.portfolio-brand:hover {
+  color: var(--purple);
+}
+
+.portfolio-nav-link {
+  color: var(--muted);
+  font-size: 0.95rem;
+  text-decoration: none;
+}
+
+.portfolio-nav-link:hover {
+  color: var(--green);
+}
+
+// Apresentação
+.portfolio-hero {
+  padding-block: clamp(3rem, 8vw, 7rem);
+}
+
+.portfolio-eyebrow {
+  display: inline-block;
+  margin-bottom: 1.5rem;
+  padding: 0.5rem 1rem;
+  border-radius: 50rem;
+  background: var(--sage);
+  color: var(--green);
+  font-size: 0.85rem;
+  letter-spacing: 0.035em;
+}
+
+.portfolio-title {
+  max-width: 900px;
+  margin-bottom: 1.5rem;
+  color: var(--green);
+  font-size: clamp(2.5rem, 5.5vw, 4.5rem);
+  font-weight: 400;
+  letter-spacing: -0.045em;
+  line-height: 1.15;
+}
+
+.portfolio-title span {
+  color: var(--purple);
+}
+
+.portfolio-intro {
+  max-width: 640px;
+  color: var(--muted);
+  font-size: 1.12rem;
+}
+
+.portfolio-section-title {
+  color: var(--green);
+  font-size: clamp(1.8rem, 3vw, 2.4rem);
+  font-weight: 400;
+  letter-spacing: -0.035em;
+}
+
+// Superfícies
+.portfolio-panel {
+  padding: clamp(1.5rem, 4vw, 3rem);
+  border-radius: 1.75rem;
+}
+
+.surface-lavender {
+  background: var(--lavender);
+}
+
+.surface-sage {
+  background: var(--sage);
+}
+
+.portfolio-card {
+  height: 100%;
+  padding: 1.75rem;
+  border: 1px solid var(--line);
+  border-radius: 1.5rem;
+  background: var(--surface);
+}
+
+.portfolio-card h3 {
+  color: var(--green);
+}
+
+.portfolio-muted {
+  color: var(--muted);
+}
+
+// Boutons
+.btn {
+  padding: 0.8rem 1.5rem;
+  border-radius: 50rem;
+  font-weight: 500;
+}
+
+.btn-primary {
+  --bs-btn-color: var(--button-text);
+  --bs-btn-bg: var(--button-bg);
+  --bs-btn-border-color: var(--button-bg);
+
+  --bs-btn-hover-color: var(--button-text);
+  --bs-btn-hover-bg: var(--button-hover);
+  --bs-btn-hover-border-color: var(--button-hover);
+
+  --bs-btn-active-color: var(--button-text);
+  --bs-btn-active-bg: var(--button-hover);
+  --bs-btn-active-border-color: var(--button-hover);
+}
+
+.btn-spirit {
+  --bs-btn-color: var(--secondary-text);
+  --bs-btn-bg: var(--secondary-bg);
+  --bs-btn-border-color: var(--secondary-bg);
+
+  --bs-btn-hover-color: var(--secondary-text);
+  --bs-btn-hover-bg: var(--secondary-hover);
+  --bs-btn-hover-border-color: var(--secondary-hover);
+
+  --bs-btn-active-color: var(--secondary-text);
+  --bs-btn-active-bg: var(--secondary-hover);
+  --bs-btn-active-border-color: var(--secondary-hover);
+}
+
+// Seletor de tema
+.theme-toggle {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+
+  padding: 0.5rem 0.85rem;
+  border: 1px solid var(--line);
+  border-radius: 50rem;
+
+  background: var(--surface);
+  color: var(--green);
+
+  font-size: 0.85rem;
+  font-weight: 500;
+  line-height: 1.5;
+}
+
+.theme-toggle:hover {
+  background: var(--sage);
+}
+
+.theme-toggle:disabled {
+  opacity: 0.65;
+}
+
+// Rodapé
+.portfolio-footer {
+  margin-top: 3rem;
+  padding-block: 2rem;
+  border-top: 1px solid var(--line);
+  color: var(--muted);
+  font-size: 0.875rem;
+}
+
+@media (max-width: 575.98px) {
+  .portfolio-navbar {
+    padding-block: 1rem;
+  }
+
+  .portfolio-intro {
+    font-size: 1rem;
+  }
+}
+// Logótipo do cabeçalho
+.portfolio-brand {
+  display: inline-flex;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+.portfolio-logo {
+  display: block;
+  width: 145px;
+  max-width: 100%;
+  height: auto;
+}
+
+// Por omissão: logótipo preto
+.portfolio-logo-day {
+  display: block;
+}
+
+.portfolio-logo-night {
+  display: none;
+}
+
+// Modo noturno: logótipo branco
+[data-bs-theme="dark"] {
+  .portfolio-logo-day {
+    display: none;
+  }
+
+  .portfolio-logo-night {
+    display: block;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .portfolio-logo {
+    width: 115px;
+  }
+}
+// Fotografia da apresentação
+.portfolio-photo-frame {
+  max-width: 460px;
+  margin-inline: auto;
+  padding: 0.65rem;
+  border: 1px solid var(--line);
+  border-radius: 1.75rem;
+  background: var(--sage);
+}
+
+.portfolio-photo {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 1.15rem;
+}
+
+.portfolio-technologies {
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--line);
+}
+
+.portfolio-technologies h3 {
+  color: var(--green);
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+.portfolio-stack-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.portfolio-stack-list li {
+  padding: 0.45rem 0.9rem;
+  border: 1px solid var(--line);
+  border-radius: 50rem;
+
+  background: var(--surface);
+  color: var(--green);
+
+  font-size: 0.85rem;
+  font-weight: 500;
+  line-height: 1.5;
+}
+
+// Formulário de contacto
+.contact-form {
+  position: relative;
+}
+
+.contact-form .form-label {
+  color: var(--green);
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+.contact-form .form-control {
+  padding: 0.8rem 1rem;
+  border: 1px solid var(--line);
+  border-radius: 0.9rem;
+
+  background: var(--surface);
+  color: var(--ink);
+}
+
+.contact-form .form-control:focus {
+  border-color: var(--green);
+  outline: 2px solid var(--green);
+  outline-offset: 2px;
+  box-shadow: none;
+}
+
+.contact-form .form-control.is-invalid {
+  border-color: #a63d4b;
+}
+
+.contact-form .invalid-feedback {
+  color: #a63d4b;
+}
+
+.contact-form textarea {
+  min-height: 160px;
+  resize: vertical;
+}
+
+.contact-feedback {
+  padding: 1rem 1.25rem;
+  border: 1px solid var(--green);
+  border-radius: 1rem;
+
+  background: var(--surface);
+  color: var(--green);
+}
+
+.contact-feedback-error {
+  border-color: #a63d4b;
+  color: #a63d4b;
+}
+
+.contact-cv-button {
+  border: 1px solid var(--green);
+}
+
+// Fora do ecrã e fora da navegação por teclado
+.contact-honeypot {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
+
+.language-switcher {
+  display: inline-flex;
+  gap: 0.2rem;
+  padding: 0.2rem;
+
+  border: 1px solid var(--line);
+  border-radius: 50rem;
+  background: var(--surface);
+}
+
+.language-switcher button {
+  padding: 0.35rem 0.65rem;
+  border: 0;
+  border-radius: 50rem;
+
+  background: transparent;
+  color: var(--muted);
+
+  font-size: 0.8rem;
+  font-weight: 600;
+  line-height: 1.5;
+}
+
+.language-switcher button:hover {
+  background: var(--sage);
+  color: var(--green);
+}
+
+.language-switcher button[aria-pressed="true"] {
+  background: var(--button-bg);
+  color: var(--button-text);
+}
+
+.language-switcher button:disabled {
+  cursor: wait;
+}

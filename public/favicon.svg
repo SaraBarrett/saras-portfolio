@@ -1,0 +1,38 @@
+<svg
+    xmlns="http://www.w3.org/2000/svg"
+    width="64"
+    height="64"
+    viewBox="0 0 64 64"
+>
+    <title>Sara Monteiro</title>
+
+    <!-- Fundo verde-floresta -->
+    <rect
+        width="64"
+        height="64"
+        rx="18"
+        fill="#285443"
+    />
+
+    <!-- Monograma SM desenhado em vetor -->
+    <g
+        fill="none"
+        stroke="#EEE8F5"
+        stroke-width="4.5"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+    >
+        <!-- S -->
+        <path
+            d="M27 22
+               H19
+               C12 22 12 32 19 32
+               H22
+               C29 32 29 42 22 42
+               H14"
+        />
+
+        <!-- M -->
+        <path d="M35 42 V22 L43 33 L51 22 V42" />
+    </g>
+</svg>
